@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #COLOURS
+   ========================================================================== */
+
+/**
+ * Defined classes to help set background, and text, colours. Properties of each
+ * colour can be set/modified in; _settings.global
+ */
+
+
+
+/**
+ * Loops each of our site colours, and creates colour classes, using the array
+ * keys from $global-colours.
+ *
+ * Example:
+ * <span class="u-color-primary">I'm the brand primary colour</span>
+ *
+ */
+
+@each $colour in $global-colours {
+
+  .u-colour-#{ nth( $colour, 1 ) } {
+    color: #{ nth( $colour, 2 ) };
+  }
+
+}
+
+
+
+/**
+ * Loops each of our site colours, and creates background classes, using the
+ * array keys from $global-colours.
+ *
+ * Example:
+ * <div class="u-bg-secondry">I'v got the brand secondary background</div>
+ *
+ */
+
+@each $colour in $global-colours {
+
+  .u-bg-#{ nth( $colour, 1 ) } {
+    background-color: #{ nth( $colour, 2 ) };
+  }
+
+}

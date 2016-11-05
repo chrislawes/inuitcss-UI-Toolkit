@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #BORDERS
+   ========================================================================== */
+
+/**
+ * Border classes, add/modify/style an elements border.
+ */
+
+ .u-bordered {
+   border: $global-size-outline solid $global-colour-outline;
+ }
+
+
+ /**
+  * Border radius class.
+  */
+
+ .u-br { border-radius: $global-radius; }
+
+
+
+/* Style variants
+   ========================================================================== */
+
+/**
+* Loops each of our site colours, and creates modifier classes for our
+* ".u-bordered" block - using the array keys from $global-colours.
+*
+* Example:
+* <div class="u-bordered u-bordered--primary">Primary colour border</div>
+*
+*/
+
+@each $colour in $global-colours {
+
+  .u-bordered--#{ nth( $colour, 1 ) } {
+    border-color: #{ nth( $colour, 2 ) };
+  }
+
+}
+
+
+/* Size variants
+  ========================================================================== */
+
+/**
+*
+* Example:
+* <div class="u-bordered u-bordered--large">Large border</div>
+*
+*/
+
+.u-bordered--large { border-width: ( $global-size-outline + 1 ); }
+
+.u-bordered--huge { border-width: ( $global-size-outline + 2 ); }

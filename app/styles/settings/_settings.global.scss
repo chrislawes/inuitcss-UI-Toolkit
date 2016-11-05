@@ -1,0 +1,51 @@
+///* ========================================================================
+//   #GLOBAL
+//   ======================================================================== */
+
+// The global settings file contains any project-wide variables; things that
+// need to be made available to the entire codebase.
+
+// File path helpers.
+$global-image-path: '../images/';
+$global-font-path: '../fonts/';
+
+// Font settings.
+$global-primary-font: 'Helvetica';
+$global-secondary-font: 'Helvetica';
+
+// Modify settings.
+// The amount we change UI elements by, on interaction/hover/focus etc.
+$glbal-enhance-variant: 5%;
+
+// Size and speed treatments.
+$global-radius: 3px;
+$global-size-outline: 1px;
+$global-transition: (1/3) + s;
+
+// Colour settings.
+// All colours used are defined here, to single variables - then concatenated
+// into the $global-colours array.
+
+$global-colour-brand-primary: #8e44ad;
+$global-colour-brand-secondary: #16a085;
+
+$global-colour-copy: #2c3e50;
+$global-colour-copy-invert: #ecf0f1;
+
+$global-colour-notify-success: #2ecc71;
+$global-colour-notify-warning: #e67e22;
+$global-colour-notify-error: #c0392b;
+
+$global-colours: (
+  "primary" :       $global-colour-brand-primary,
+  "secondary" :     $global-colour-brand-secondary,
+  "copy" :          $global-colour-copy,
+  "copy-invert":    $global-colour-copy-invert,
+  "success":        $global-colour-notify-success,
+  "warning":        $global-colour-notify-warning,
+  "error":          $global-colour-notify-error
+);
+
+// Colour declarations the don't need to be in our global array.
+$global-colour-copy-links: #3498db;
+$global-colour-outline: #bdc3c7;

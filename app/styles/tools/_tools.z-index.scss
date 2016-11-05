@@ -1,0 +1,21 @@
+///* ========================================================================
+//   #Z-INDEX
+//   ======================================================================== */
+
+/**
+ * Declare an array of elements with the desired highest z-index last:
+ *
+ * $elements: "footer", "content", "header", "modal";
+ *
+ * Example:
+ * z-index: index( $elements, "modal" );
+ *
+ * Will compile to:
+ * z-index: 4;
+ *
+ * From:
+ * http://www.smashingmagazine.com/2014/06/12/sassy-z-index-management-for-complex-layouts/
+ *
+ */
+
+$elements: "footer", "content", "header", "modal";

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Assumption; all buttons will have light text.
+ */
+
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+}
+
+
+
+/* Style variants
+   ========================================================================== */
+
+@each $colour in $global-colours {
+
+  // Extract name and colour from each loop, to use in variants.
+  $this-name: nth( $colour, 1 );
+  $this-colour: nth( $colour, 2 );
+
+  .c-btn--#{ $this-name } {
+    background-color: $this-colour;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none; /* [4] */
+      color: $global-colour-copy-invert; /* [6] */
+    }
+
+    &:hover,
+    &:focus {
+      background-color: darken( $this-colour, $glbal-enhance-variant );
+    }
+
+  }
+
+}
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: inuit-rem($inuit-global-spacing-unit-tiny) inuit-rem($inuit-global-spacing-unit-small);
+}
+
+.c-btn--large {
+  padding: inuit-rem($inuit-global-spacing-unit) inuit-rem($inuit-global-spacing-unit-large);
+}
