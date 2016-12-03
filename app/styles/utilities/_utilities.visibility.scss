@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #VISIBILITY
+   ========================================================================== */
+
+/**
+ * NOTE: This file extends; "inuitcss/utilities/hide".
+ */
+
+
+
+ /**
+  * Hide and show elements with these classes.
+  * For visulay hidden, but still accessable to screenreaders, use; .u-hidden.
+  */
+
+
+
+.u-hide {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.u-show {
+  display: block !important;
+  visibility: visible !important;
+}
+
+.u-show-inline {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+
+
+/**
+ * Use the same visibility helper classes but add responsive variants.
+ *
+ * .u-hide@mobile
+ * .u-show-inline@desktop
+ */
+
+@if (variable-exists(mq-breakpoints)) {
+
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+    @include mq($from: $inuit-bp-name) {
+
+      .u-hide#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        display: none !important;
+        visibility: hidden !important;
+      }
+
+      .u-show#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        display: block !important;
+        visibility: visible !important;
+      }
+
+      .u-show-inline#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        display: block !important;
+        visibility: visible !important;
+      }
+
+    }
+
+  }
+
+}

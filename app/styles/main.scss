@@ -124,6 +124,7 @@
  * Spacing..............Extend default helpers to add responsive classes.
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Hide.................Helper classes to hide content
+ * Visibility...........Extends "Hide", to add showing, with responsive helpers.
  * Colours..............Background, and text colour, helpers.
  * Borders..............Outlines, and border radius, classes.
  */
@@ -135,5 +136,6 @@
 @import "utilities/_utilities.spacing";
 @import "../../node_modules/inuitcss/utilities/utilities.print";
 @import "../../node_modules/inuitcss/utilities/utilities.hide";
+@import "utilities/_utilities.visibility";
 @import "utilities/_utilities.colours";
 @import "utilities/_utilities.borders";
