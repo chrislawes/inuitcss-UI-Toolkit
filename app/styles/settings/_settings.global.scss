@@ -5,24 +5,73 @@
 // The global settings file contains any project-wide variables; things that
 // need to be made available to the entire codebase.
 
+
+
+/* Base, Grid, and Responsive settings
+   ========================================================================== */
+
+/*
+ * 1. NOTE: this is also used for the vertical spacing helpers, this value gets
+ * passed to $inuit-global-spacing-unit.
+ */
+
+
+// Layout settings.
+$inuit-wrapper-width: 1200px;
+
+// Base settings/
+$inuit-global-font-size:    16px ;
+$inuit-global-line-height:  24px ; /* [1] */
+
+
+// Spacing settings.
+$inuit-spacing-sizes: (
+  null: $inuit-global-spacing-unit,
+  '-small': $inuit-global-spacing-unit-small,
+  '-large': $inuit-global-spacing-unit-large,
+  '-none': 0
+);
+
+
+// Responsive settings.
+// NOTE: Whole framework is mobile first. "mobile" is 320px and up, not down.
+$mq-breakpoints: (
+    mobile:  320px,
+    tablet:  640px,
+    desktop: 980px,
+    wide: $inuit-wrapper-width
+);
+
+
+
+/* Shorthand Helpers
+   ========================================================================== */
+
+
 // File path helpers.
 $global-image-path: '../images/';
 $global-font-path: '../fonts/';
+
 
 // Font settings.
 $global-primary-font: 'Helvetica';
 $global-secondary-font: 'Helvetica';
 
 
-// Modify settings.
+
+/* Modify UI settings
+   ========================================================================== */
+
 
 // The amount we change UI elements by, on interaction/hover/focus etc.
 $glbal-enhance-variant: 5%;
 
-// The amount we fade colours when they overlay other ui elements
+
+// The amount we fade colours when they overlay other ui elements.
 // e.g. Modal backgrounds
 // use: background: rgba( $global-colour-brand-primary, $glbal-fade-variant );
 $global-opacity-variant: .85;
+
 
 // Size and speed treatments.
 $global-radius: 3px;
@@ -30,10 +79,15 @@ $global-size-outline: 1px;
 $global-transition: (1/3) + s;
 
 
-// Colour settings.
+
+/* Colour settings
+   ========================================================================== */
+
 
 // All colours used are defined here, to single variables - then concatenated
-// into the $global-colours array.
+// into the $global-colours array. This $global-colours array is used throughout
+// the codebase to refrance/loop our site colours.
+
 
 $global-colour-background: #ffffff;
 
@@ -56,6 +110,7 @@ $global-colours: (
   "warning":        $global-colour-notify-warning,
   "error":          $global-colour-notify-error
 );
+
 
 // Colour declarations the don't need to be in our global array.
 $global-colour-copy-links: #3498db;
