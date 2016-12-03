@@ -105,9 +105,11 @@
  * COMPONENTS
  * Buttons..............An example button component, and how it fits into the
  *                      inuitcss framework.
+ * Modal................Lightbox style overlay, in semitransparent fixed wrapper
  */
 
 @import "components/components.buttons";
+@import "components/components.modal";
 
 
 /**
@@ -117,6 +119,7 @@
  * Headings.............Reassigning our heading styles to helper classes.
  * Spacing..............Nudge bits of the DOM around with these spacing
  *                      classes.
+ * Spacing..............Extend default helpers to add responsive classes.
  * Print................Reset-like styles taken from the HTML5 Boilerplate.
  * Hide.................Helper classes to hide content
  * Colours..............Background, and text colour, helpers.
@@ -127,7 +130,8 @@
 @import "../../node_modules/inuitcss/utilities/utilities.widths";
 @import "../../node_modules/inuitcss/utilities/utilities.headings";
 @import "../../node_modules/inuitcss/utilities/utilities.spacing";
+@import "utilities/_utilities.spacing";
 @import "../../node_modules/inuitcss/utilities/utilities.print";
 @import "../../node_modules/inuitcss/utilities/utilities.hide";
-@import "utilities/utilities.colours";
-@import "utilities/utilities.borders";
+@import "utilities/_utilities.colours";
+@import "utilities/_utilities.borders";

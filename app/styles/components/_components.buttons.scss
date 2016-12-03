@@ -9,7 +9,6 @@
  *    buttons).
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
- * 6. Assumption; all buttons will have light text.
  */
 
 .c-btn {
@@ -29,6 +28,11 @@
 /* Style variants
    ========================================================================== */
 
+/**
+ * 1. Reset/normalize some styles.
+ * 2. Assumption; all buttons will have light text.
+ */
+
 @each $colour in $global-colours {
 
   // Extract name and colour from each loop, to use in variants.
@@ -42,8 +46,8 @@
     &:hover,
     &:active,
     &:focus {
-      text-decoration: none; /* [4] */
-      color: $global-colour-copy-invert; /* [6] */
+      text-decoration: none; /* [1] */
+      color: $global-colour-copy-invert; /* [2] */
     }
 
     &:hover,

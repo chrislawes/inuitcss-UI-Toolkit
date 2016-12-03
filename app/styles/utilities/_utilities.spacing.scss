@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+// NOTE: This file only extends inuitcss/utilities/spacing.
+
+/**
+ * Make the same margin/padding classes avaliable as responsive helpers
+ *
+ *   .u-margin-top@tablet {}
+ *   .u-padding-left-large@desktop {}
+ *   .u-padding-right-none@mobile {}
+ */
+
+
+@if (variable-exists(mq-breakpoints)) {
+
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+    @include mq($from: $inuit-bp-name) {
+
+      @each $property, $property-namespace in $inuit-spacing-properties {
+
+        @each $direction, $direction-namespace in $inuit-spacing-directions {
+
+          @each $size, $value in $inuit-spacing-sizes {
+
+            .u-#{$property-namespace}#{$direction-namespace}#{$size}#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+              #{$property}#{$direction}: $value !important;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -5,10 +5,10 @@
 /**
  * Declare an array of elements with the desired highest z-index last:
  *
- * $elements: "footer", "content", "header", "modal";
+ * $zindex: "footer", "content", "header", "modal";
  *
  * Example:
- * z-index: index( $elements, "modal" );
+ * z-index: index( $zindex, "modal" );
  *
  * Will compile to:
  * z-index: 4;
@@ -18,4 +18,4 @@
  *
  */
 
-$elements: "footer", "content", "header", "modal";
+$zindex: "footer", "content", "header", "modal";

@@ -6,16 +6,16 @@
  * Border classes, add/modify/style an elements border.
  */
 
- .u-bordered {
-   border: $global-size-outline solid $global-colour-outline;
- }
+.u-bordered {
+  border: $global-size-outline solid $global-colour-outline;
+}
 
 
  /**
   * Border radius class.
   */
 
- .u-br { border-radius: $global-radius; }
+.u-br { border-radius: $global-radius; }
 
 
 

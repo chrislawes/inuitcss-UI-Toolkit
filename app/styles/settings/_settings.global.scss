@@ -13,18 +13,29 @@ $global-font-path: '../fonts/';
 $global-primary-font: 'Helvetica';
 $global-secondary-font: 'Helvetica';
 
+
 // Modify settings.
+
 // The amount we change UI elements by, on interaction/hover/focus etc.
 $glbal-enhance-variant: 5%;
+
+// The amount we fade colours when they overlay other ui elements
+// e.g. Modal backgrounds
+// use: background: rgba( $global-colour-brand-primary, $glbal-fade-variant );
+$global-opacity-variant: .85;
 
 // Size and speed treatments.
 $global-radius: 3px;
 $global-size-outline: 1px;
 $global-transition: (1/3) + s;
 
+
 // Colour settings.
+
 // All colours used are defined here, to single variables - then concatenated
 // into the $global-colours array.
+
+$global-colour-background: #ffffff;
 
 $global-colour-brand-primary: #8e44ad;
 $global-colour-brand-secondary: #16a085;

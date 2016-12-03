@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #MODAL
+   ========================================================================== */
+
+/**
+ * 1. Modal content is half the site width by default
+ * 2. Place element in the middle of the body:
+ *    https://css-tricks.com/centering-percentage-widthheight-elements/
+ * 3. Auto, not Scroll, to only show scrollbar when needed
+ */
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba( $global-colour-brand-primary, $global-opacity-variant );
+  z-index: index( $zindex, "modal" );
+}
+
+  .c-modal__content {
+    position: absolute;
+
+    top: 50%; /* [2] */
+    left: 50%; /* [2] */
+    transform: translate(-50%, -50%); /* [2] */
+
+    width: ( $inuit-wrapper-width / 2 ); /* [1] */
+    max-width: 80%;
+    max-height: 80vh;
+
+    padding: $inuit-global-spacing-unit;
+    overflow: auto; /* [3] */
+    background: $global-colour-background;
+  }
