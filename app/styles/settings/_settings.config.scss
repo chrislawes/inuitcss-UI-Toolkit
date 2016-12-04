@@ -5,10 +5,9 @@
 // A map of global config settings. Define any project-level configuration,
 // feature switches, etc. in here.
 
+
 $inuit-config: (
-  env: dev,
-  healthcheck: false,
-  debug: true,
+  debug: false
 );
 
 // You can access data in this map using the following function:
@@ -22,3 +21,50 @@ $inuit-config: (
 @function inuit-config($key) {
   @return map-get($inuit-config, $key);
 }
+
+
+
+/* Base, Grid, and Responsive settings
+   ========================================================================== */
+
+/**
+ * 1. NOTE: this is also used for the vertical spacing helpers, this value gets
+ * passed to $inuit-global-spacing-unit.
+ */
+
+
+// Layout settings.
+$inuit-wrapper-width: 1200px;
+
+// Base settings/
+$inuit-global-font-size:    16px ;
+$inuit-global-line-height:  24px ; /* [1] */
+
+
+// Spacing settings.
+$inuit-spacing-sizes: (
+  null:       $inuit-global-spacing-unit,
+  '-small':   $inuit-global-spacing-unit-small,
+  '-large':   $inuit-global-spacing-unit-large,
+  '-none':    0
+);
+
+
+// Responsive settings.
+// NOTE: Whole framework is mobile first. "mobile" is 320px and up, not down.
+$mq-breakpoints: (
+    mobile:    320px,
+    tablet:    640px,
+    desktop:   980px,
+    wide:      $inuit-wrapper-width
+);
+
+
+
+/* Shorthand Helpers
+   ========================================================================== */
+
+
+// File path helpers.
+$global-image-path:  '../images/';
+$global-font-path:   '../fonts/';

@@ -15,9 +15,10 @@
  * Global...............Project-wide variables and settings.
  */
 
-@import "settings/settings.config";
 @import "../../node_modules/inuitcss/settings/settings.core";
 @import "settings/settings.global";
+@import "settings/settings.config";
+@import "settings/settings.debug";
 
 
 /**

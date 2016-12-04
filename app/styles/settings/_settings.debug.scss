@@ -1,0 +1,21 @@
+///* ========================================================================
+//   #DEBUG
+//   ======================================================================== */
+
+// This partial only gets triggered if the "debug" key is set to true, in the
+// $inuit-config array, found in "settings/config".
+
+
+/**
+ * 1. Divide spacer var (by "1px") to remove "px":
+ *  https://css-tricks.com/snippets/sass/strip-unit-function/
+ */
+
+@if ( inuit-config(debug) == true ) {
+
+  // Show vertical rhythm overlay, using grid line-height (http://basehold.it)
+  html {
+    background-image: url(http://basehold.it/i/#{$inuit-global-line-height / 1px}); /* [1] */
+  }
+
+}
