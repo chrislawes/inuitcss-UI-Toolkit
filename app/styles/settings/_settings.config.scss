@@ -7,7 +7,7 @@
 
 
 $inuit-config: (
-  debug: false
+  debug: true
 );
 
 // You can access data in this map using the following function:
@@ -53,10 +53,10 @@ $inuit-spacing-sizes: (
 // Responsive settings.
 // NOTE: Whole framework is mobile first. "mobile" is 320px and up, not down.
 $mq-breakpoints: (
-    mobile:    320px,
-    tablet:    640px,
-    desktop:   980px,
-    wide:      $inuit-wrapper-width
+  mobile:    320px,
+  tablet:    640px,
+  desktop:   980px,
+  wide:      $inuit-wrapper-width
 );
 
 
