@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /**
- * Border classes, add/modify/style an elements border.
+ * Border helper, add a border to an element.
  */
 
 .u-bordered {
@@ -12,7 +12,7 @@
 
 
  /**
-  * Border radius class.
+  * Border radius helper.
   */
 
 .u-br { border-radius: $global-radius; }
@@ -24,7 +24,7 @@
 
 /**
 * Loops each of our site colours, and creates modifier classes for our
-* ".u-bordered" block - using the array keys from $global-colours.
+* ".u-bordered" helper - using the array keys from $global-colours.
 *
 * Example:
 * <div class="u-bordered u-bordered--primary">Primary colour border</div>
