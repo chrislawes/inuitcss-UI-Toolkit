@@ -104,13 +104,11 @@
 
 /**
  * COMPONENTS
- * Typography...........Extend headings to be classes.
  * Buttons..............An example button component, and how it fits into the
  *                      inuitcss framework.
  * Modal................Lightbox overlay, in semi-transparent fixed wrapper.
  */
 
-@import "components/components.typography";
 @import "components/components.buttons";
 @import "components/components.modal";
 
