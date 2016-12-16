@@ -31,7 +31,7 @@ $inuit-config: (
  * 1. NOTE: this is also used for the vertical spacing helpers, this value gets
  * passed to $inuit-global-spacing-unit.
  * 2. Repeat from framework; re-map spacer unit to font-size. Shouldn't need,
- * but kinda do, because ordering.
+ * but kinda do, because ordering. (repeat from: _utilities.spacing.scss)
  */
 
 
@@ -44,14 +44,20 @@ $inuit-global-line-height:  32px ; /* [1] */
 
 $inuit-global-spacing-unit: $inuit-global-line-height; /* [2] */
 
-// Spacing settings.
-$inuit-spacing-sizes: (
-  null:       $inuit-global-spacing-unit,
-  '-small':   $inuit-global-spacing-unit-small,
-  '-large':   $inuit-global-spacing-unit-large,
-  '-none':    0
-);
+$inuit-global-spacing-unit-tiny:  round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-tiny); /* [2] */
+$inuit-global-spacing-unit-small: round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-small); /* [2] */
+$inuit-global-spacing-unit-large: round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-large); /* [2] */
+$inuit-global-spacing-unit-huge:  round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-huge); /* [2] */
 
+$inuit-spacing-sizes: (
+  null:           $inuit-global-spacing-unit,
+  '-quarter':     $inuit-global-spacing-unit-tiny,
+  '-half':        $inuit-global-spacing-unit-small,
+  '-double':      $inuit-global-spacing-unit-large,
+  '-triple':      ($inuit-global-spacing-unit-large + $inuit-global-spacing-unit),
+  '-quadruple':   $inuit-global-spacing-unit-huge,
+  '-none':        0
+);
 
 // Responsive settings.
 // NOTE: Whole framework is mobile first. "mobile" is that size and up, not down.
