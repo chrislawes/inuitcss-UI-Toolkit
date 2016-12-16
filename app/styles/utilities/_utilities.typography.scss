@@ -1,0 +1,28 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+
+ /**
+  * Small single responsibility classes, to modify/extend text elements.
+  */
+
+
+/* Alignments
+   ========================================================================== */
+
+.u-text-left {
+  text-align: left !important;
+}
+
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-text-right {
+  text-align: right !important;
+}
+
+.u-text-justify {
+  text-align: justify !important;
+}
