@@ -26,3 +26,25 @@
 .u-text-justify {
   text-align: justify !important;
 }
+
+
+
+/* Word Adjustments
+   ========================================================================== */
+
+/**
+ * 1. Single line text truncate. About: 
+ * https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
+ * 2. Make sure we're working with a block element.
+ */
+
+.u-truncate { /* [1] */
+	display: block; /* [2] */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.u-word-break {
+	word-break: break-all;
+}

@@ -1,0 +1,37 @@
+/* ==========================================================================
+   #DISPLAY
+   ========================================================================== */
+
+
+ /**
+  * Control the box model display, and handle interior element leakage.
+  */
+
+
+/* Displays
+   ========================================================================== */
+
+/**
+ * NOTE: these are not hide/show helpers (see: _utilities.hide.scss), these are
+ * to set the display types.
+ */
+
+.u-block {
+  display: block !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+
+/* Overflows
+   ========================================================================== */
+
+.u-overflow-scroll {
+	overflow: scroll !important;
+}
+
+.u-overflow-hidden {
+	overflow: hidden !important;
+}
