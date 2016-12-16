@@ -30,6 +30,8 @@ $inuit-config: (
 /**
  * 1. NOTE: this is also used for the vertical spacing helpers, this value gets
  * passed to $inuit-global-spacing-unit.
+ * 2. Repeat from framework; re-map spacer unit to font-size. Shouldn't need,
+ * but kinda do, because ordering.
  */
 
 
@@ -38,8 +40,9 @@ $inuit-wrapper-width: 1200px;
 
 // Base settings/
 $inuit-global-font-size:    16px ;
-$inuit-global-line-height:  24px ; /* [1] */
+$inuit-global-line-height:  32px ; /* [1] */
 
+$inuit-global-spacing-unit: $inuit-global-line-height; /* [2] */
 
 // Spacing settings.
 $inuit-spacing-sizes: (
@@ -51,7 +54,7 @@ $inuit-spacing-sizes: (
 
 
 // Responsive settings.
-// NOTE: Whole framework is mobile first. "mobile" is 320px and up, not down.
+// NOTE: Whole framework is mobile first. "mobile" is that size and up, not down.
 $mq-breakpoints: (
   mobile:    320px,
   tablet:    640px,
