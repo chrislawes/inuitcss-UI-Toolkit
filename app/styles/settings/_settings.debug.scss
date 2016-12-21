@@ -13,9 +13,14 @@
 
 @if ( inuit-config(debug) == true ) {
 
+  // amount to split the grid by
+  // 2 = double grid (baseline, and middle-line)
+  // 1 = normal grid (baseline only)
+  $split-grid: 2;
+
   // Show vertical rhythm overlay, using grid line-height (http://basehold.it)
   html {
-    background-image: url(http://basehold.it/i/#{$inuit-global-line-height / 1px}); /* [1] */
+    background-image: url(http://basehold.it/i/#{($inuit-global-line-height / $split-grid) / 1px}); /* [1] */
   }
 
 }

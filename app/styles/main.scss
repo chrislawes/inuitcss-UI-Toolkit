@@ -106,11 +106,12 @@
 
 /**
  * COMPONENTS
- * Buttons..............An example button component, and how it fits into the
- *                      inuitcss framework.
+ * Inputs...............User input, form elements.
+ * Buttons..............Main button component, and modifiers.
  * Modal................Lightbox overlay, in semi-transparent fixed wrapper.
  */
 
+@import "components/components.inputs";
 @import "components/components.buttons";
 @import "components/components.modal";
 

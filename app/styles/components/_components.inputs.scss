@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #INPUTS
+   ========================================================================== */
+
+/**
+ * All types of user inputs, you'd find inside a form tag.
+ * This does not address the form tag itself, labels, or buttons.
+ */
+
+
+ /* Text Field and Textarea
+    ========================================================================== */
+
+/**
+ * 1. Grow from baseline of the grid
+ * 2. Replace border (adds to vertical height), with inset box-shadow.
+ * Extending utility will effect source order.
+ * 3. Textareas are double the height of text inputs, by default.
+ */
+
+.c-input-text,
+.c-input-textarea {
+  vertical-align: bottom; /* [1] */
+  border: none; /* [2] */
+  @extend .u-bordered; /* [2] */
+}
+
+.c-input-text {
+  height: $inuit-global-line-height;
+}
+
+.c-input-textarea {
+  height: ($inuit-global-line-height * 3); /* [3] */
+}
+
+
+
+/* Options: Check and Radio
+   ========================================================================== */
+
+.c-input-check,
+.c-input-radio {
+  margin-right: $inuit-global-spacing-unit-tiny;
+}
+
+.c-input-check {}
+
+.c-input-radio {}
+
+
+
+/* Select
+   ========================================================================== */
+
+.c-input-select {}
