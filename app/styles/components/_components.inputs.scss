@@ -5,6 +5,9 @@
 /**
  * All types of user inputs, you'd find inside a form tag.
  * This does not address the form tag itself, labels, or buttons.
+ *
+ * By default, inputs are 1 1/2 lines; with 1/4 margin top and bottom.
+ *
  */
 
 
@@ -19,14 +22,18 @@
  */
 
 .c-input-text,
-.c-input-textarea {
+.c-input-textarea,
+.c-input-select {
   vertical-align: bottom; /* [1] */
   border: none; /* [2] */
   @extend .u-bordered; /* [2] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small;
 }
 
 .c-input-text {
-  height: $inuit-global-line-height;
+  height: $inuit-global-line-height + $inuit-global-spacing-unit-small;
+  margin-top: $inuit-global-spacing-unit-tiny;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
 }
 
 .c-input-textarea {
@@ -52,4 +59,14 @@
 /* Select
    ========================================================================== */
 
-.c-input-select {}
+/**
+ * 1. Design assumption; selects should have white backgrounds
+ */
+
+.c-input-select {
+  width: 100%;
+  height: $inuit-global-line-height + $inuit-global-spacing-unit-small;
+  margin-top: $inuit-global-spacing-unit-tiny;
+  margin-bottom: $inuit-global-spacing-unit-tiny;
+  background: $global-colour-background; /* [1] */
+}

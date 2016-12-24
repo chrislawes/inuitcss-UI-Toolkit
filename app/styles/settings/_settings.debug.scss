@@ -14,9 +14,10 @@
 @if ( inuit-config(debug) == true ) {
 
   // amount to split the grid by
-  // 2 = double grid (baseline, and middle-line)
   // 1 = normal grid (baseline only)
-  $split-grid: 2;
+  // 2 = double grid (baseline, and middle-line)
+  // 4 = qualter grid (baseline, and middle-line, and middle-middle-line)
+  $split-grid: 1;
 
   // Show vertical rhythm overlay, using grid line-height (http://basehold.it)
   html {
