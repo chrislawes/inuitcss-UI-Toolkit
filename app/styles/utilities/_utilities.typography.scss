@@ -28,12 +28,65 @@
 }
 
 
+/**
+ * Make same text alignment helpers available responsively.
+ *
+ * .u-text-left@mobile
+ * .u-text-justify@tablet
+ */
+
+@if (variable-exists(mq-breakpoints)) {
+
+  @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
+
+    @include mq($from: $inuit-bp-name) {
+
+      .u-text-left#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: left !important;
+      }
+
+      .u-text-center#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: center !important;
+      }
+
+      .u-text-right#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: right !important;
+      }
+
+      .u-text-justify#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+        text-align: justify !important;
+      }
+
+    }
+
+  }
+
+}
+
+
+
+/* Weight Variations
+   ========================================================================== */
+
+.u-weight-bold {
+  font-weight: 800 !important;
+}
+
+.u-weight-normal {
+  font-weight: 300 !important;
+}
+
+.u-weight-light {
+  font-weight: 100 !important;
+}
+
+
 
 /* Word Adjustments
    ========================================================================== */
 
 /**
- * 1. Single line text truncate. About: 
+ * 1. Single line text truncate. About:
  * https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/
  * 2. Make sure we're working with a block element.
  */
