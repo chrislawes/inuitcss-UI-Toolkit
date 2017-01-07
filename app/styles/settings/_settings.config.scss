@@ -12,14 +12,14 @@ $inuit-config: (
 
 // You can access data in this map using the following function:
 //
-// inuit-config(<key>)
+// inuit-config( <key> )
 //
 // Example usage:
 //
-// @if (inuit-config(debug) == true) { ...  }
+// @if (inuit-config( debug ) == true) { ...  }
 
-@function inuit-config($key) {
-  @return map-get($inuit-config, $key);
+@function inuit-config( $key ) {
+  @return map-get( $inuit-config, $key );
 }
 
 
@@ -39,22 +39,22 @@ $inuit-config: (
 $inuit-wrapper-width: 1200px;
 
 // Base settings/
-$inuit-global-font-size:    16px ;
-$inuit-global-line-height:  32px ; /* [1] */
+$inuit-global-font-size:    16px;
+$inuit-global-line-height:  32px; /* [1] */
 
 $inuit-global-spacing-unit: $inuit-global-line-height; /* [2] */
 
-$inuit-global-spacing-unit-tiny:  round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-tiny); /* [2] */
-$inuit-global-spacing-unit-small: round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-small); /* [2] */
-$inuit-global-spacing-unit-large: round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-large); /* [2] */
-$inuit-global-spacing-unit-huge:  round($inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-huge); /* [2] */
+$inuit-global-spacing-unit-tiny:  round( $inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-tiny ); /* [2] */
+$inuit-global-spacing-unit-small: round( $inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-small ); /* [2] */
+$inuit-global-spacing-unit-large: round( $inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-large ); /* [2] */
+$inuit-global-spacing-unit-huge:  round( $inuit-global-spacing-unit * $inuit-global-spacing-unit-factor-huge ); /* [2] */
 
 $inuit-spacing-sizes: (
   null:           $inuit-global-spacing-unit,
   '-quarter':     $inuit-global-spacing-unit-tiny,
   '-half':        $inuit-global-spacing-unit-small,
   '-double':      $inuit-global-spacing-unit-large,
-  '-triple':      ($inuit-global-spacing-unit-large + $inuit-global-spacing-unit),
+  '-triple':      ( $inuit-global-spacing-unit-large + $inuit-global-spacing-unit ),
   '-quadruple':   $inuit-global-spacing-unit-huge,
   '-none':        0
 );
@@ -62,10 +62,10 @@ $inuit-spacing-sizes: (
 // Responsive settings.
 // NOTE: Whole framework is mobile first. "mobile" is that size and up, not down.
 $mq-breakpoints: (
-  mobile:    320px,
-  tablet:    640px,
-  desktop:   980px,
-  wide:      $inuit-wrapper-width
+  'mobile':    320px,
+  'tablet':    640px,
+  'desktop':   980px,
+  'wide':      $inuit-wrapper-width
 );
 
 

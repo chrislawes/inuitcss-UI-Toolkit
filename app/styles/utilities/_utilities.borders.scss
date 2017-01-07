@@ -4,7 +4,7 @@
 
 /**
  * Border helper, add a border to an element. Uses a inset box-shadow as not
- * to mess with vertical rhythm. 
+ * to mess with vertical rhythm.
  */
 
 .u-bordered {
@@ -52,18 +52,18 @@
 *
 */
 
-.u-bordered-top { 
+.u-bordered-top {
   box-shadow: inset 0 $global-size-outline 0 0 $global-colour-outline;
 }
 
-.u-bordered-right { 
-  box-shadow: inset #{-($global-size-outline)} 0 0 0 $global-colour-outline;
+.u-bordered-right {
+  box-shadow: inset #{ -( $global-size-outline ) } 0 0 0 $global-colour-outline;
 }
 
-.u-bordered-bottom { 
-  box-shadow: inset 0 #{-($global-size-outline)} 0 0 $global-colour-outline;
+.u-bordered-bottom {
+  box-shadow: inset 0 #{ -( $global-size-outline ) } 0 0 $global-colour-outline;
 }
 
-.u-bordered-left { 
+.u-bordered-left {
   box-shadow: inset $global-size-outline 0 0 0 $global-colour-outline;
 }

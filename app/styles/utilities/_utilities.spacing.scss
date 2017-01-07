@@ -17,11 +17,11 @@
  */
 
 
-@if (variable-exists(mq-breakpoints)) {
+@if ( variable-exists( mq-breakpoints ) ) {
 
   @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
 
-    @include mq($from: $inuit-bp-name) {
+    @include mq( $from: $inuit-bp-name ) {
 
       @each $property, $property-namespace in $inuit-spacing-properties {
 
@@ -29,8 +29,8 @@
 
           @each $size, $value in $inuit-spacing-sizes {
 
-            .u-#{$property-namespace}#{$direction-namespace}#{$size}#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
-              #{$property}#{$direction}: $value !important;
+            .u-#{ $property-namespace }#{ $direction-namespace }#{ $size }#{ $inuit-widths-breakpoint-separator }#{ $inuit-bp-name } {
+              #{ $property }#{ $direction }: $value !important;
             }
 
           }

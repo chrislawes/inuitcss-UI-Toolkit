@@ -35,25 +35,25 @@
  * .u-text-justify@tablet
  */
 
-@if (variable-exists(mq-breakpoints)) {
+@if ( variable-exists( mq-breakpoints ) ) {
 
   @each $inuit-bp-name, $inuit-bp-value in $mq-breakpoints {
 
-    @include mq($from: $inuit-bp-name) {
+    @include mq( $from: $inuit-bp-name ) {
 
-      .u-text-left#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+      .u-text-left#{ $inuit-widths-breakpoint-separator }#{ $inuit-bp-name } {
         text-align: left !important;
       }
 
-      .u-text-center#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+      .u-text-center#{ $inuit-widths-breakpoint-separator }#{ $inuit-bp-name } {
         text-align: center !important;
       }
 
-      .u-text-right#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+      .u-text-right#{ $inuit-widths-breakpoint-separator }#{ $inuit-bp-name } {
         text-align: right !important;
       }
 
-      .u-text-justify#{$inuit-widths-breakpoint-separator}#{$inuit-bp-name} {
+      .u-text-justify#{ $inuit-widths-breakpoint-separator }#{ $inuit-bp-name } {
         text-align: justify !important;
       }
 

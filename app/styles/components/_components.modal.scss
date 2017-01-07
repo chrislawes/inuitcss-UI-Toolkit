@@ -15,8 +15,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba( map-get($global-colours, "primary"), $global-opacity-variant );
-  z-index: index( $zindex, "modal" );
+  background: rgba( map-get( $global-colours, 'primary' ), $global-opacity-variant );
+  z-index: index( $zindex, 'modal' );
 }
 
   .c-modal__content {

@@ -33,13 +33,13 @@
 }
 
 .c-input-text {
-  height: $inuit-global-line-height + $inuit-global-spacing-unit-small;
+  height: ( $inuit-global-line-height + $inuit-global-spacing-unit-small );
   margin-top: $inuit-global-spacing-unit-tiny;
   margin-bottom: $inuit-global-spacing-unit-tiny;
 }
 
 .c-input-textarea {
-  height: ($inuit-global-line-height * 3); /* [4] */
+  height: ( $inuit-global-line-height * 3 ); /* [4] */
 }
 
 
@@ -67,7 +67,7 @@
 
 .c-input-select {
   width: 100%;
-  height: $inuit-global-line-height + $inuit-global-spacing-unit-small;
+  height: ( $inuit-global-line-height + $inuit-global-spacing-unit-small );
   margin-top: $inuit-global-spacing-unit-tiny;
   margin-bottom: $inuit-global-spacing-unit-tiny;
   background: $global-colour-background; /* [1] */

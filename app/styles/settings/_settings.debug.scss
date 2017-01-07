@@ -11,7 +11,7 @@
  *  https://css-tricks.com/snippets/sass/strip-unit-function/
  */
 
-@if ( inuit-config(debug) == true ) {
+@if ( inuit-config( debug ) == true ) {
 
   // amount to split the grid by
   // 1 = normal grid (baseline only)
@@ -21,7 +21,7 @@
 
   // Show vertical rhythm overlay, using grid line-height (http://basehold.it)
   html {
-    background-image: url(http://basehold.it/i/#{($inuit-global-line-height / $split-grid) / 1px}); /* [1] */
+    background-image: url( 'http://basehold.it/i/#{ ( $inuit-global-line-height / $split-grid ) / 1px }' ); /* [1] */
   }
 
 }
