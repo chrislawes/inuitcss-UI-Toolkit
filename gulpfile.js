@@ -24,44 +24,9 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 
-gulp.task('scripts', () => {
-  return gulp.src('app/scripts/**/*.js')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.babel())
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
-});
-
-function lint(files, options) {
-  return gulp.src(files)
-    .pipe(reload({stream: true, once: true}))
-    .pipe($.eslint(options))
-    .pipe($.eslint.format())
-    .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
-}
-
-gulp.task('lint', () => {
-  return lint('app/scripts/**/*.js', {
-    fix: true
-  })
-    .pipe(gulp.dest('app/scripts'));
-});
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js', {
-    fix: true,
-    env: {
-      mocha: true
-    }
-  })
-    .pipe(gulp.dest('test/spec'));
-});
-
-gulp.task('html', ['styles', 'scripts'], () => {
+gulp.task('html', ['styles'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
@@ -92,7 +57,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['styles', 'fonts'], () => {
     browserSync({
       notify: false,
       port: 9000,
@@ -111,7 +76,6 @@ gulp.task('serve', () => {
     ]).on('change', reload);
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
-      gulp.watch('app/scripts/**/*.js', ['scripts']);
       gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
   });
@@ -127,7 +91,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('serve:test', ['scripts'], () => {
+gulp.task('serve:test', () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -135,15 +99,11 @@ gulp.task('serve:test', ['scripts'], () => {
     server: {
       baseDir: 'test',
       routes: {
-        '/scripts': '.tmp/scripts',
         '/bower_components': 'bower_components'
       }
     }
   });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch(['test/spec/**/*.js', 'test/index.html']).on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
 });
 
 // inject bower components
