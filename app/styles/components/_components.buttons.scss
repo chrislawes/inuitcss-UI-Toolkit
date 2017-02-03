@@ -9,18 +9,20 @@
  *    buttons).
  * 4. Reset/normalize some styles.
  * 5. Force all button-styled elements to appear clickable.
+ * 6. Reset for HTML Button.
  */
 
 .c-btn {
   display: inline-block; /* [1] */
   vertical-align: middle; /* [2] */
+  margin: 0; /* [4] */
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  border: none; /* [6] */
   font: inherit; /* [3] */
   text-align: center; /* [4] */
-  margin: 0; /* [4] */
-  cursor: pointer; /* [5] */
-  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
-  transition: $global-transition;
   border-radius: $global-radius;
+  cursor: pointer; /* [5] */
+  transition: $global-transition;
 }
 
 
@@ -36,11 +38,11 @@
 @each $colour in $global-colours {
 
   // Extract name and colour from each loop, to use in variants.
-  $this-name: nth( $colour, 1 );
-  $this-colour: nth( $colour, 2 );
+  $this-colour-name: nth( $colour, 1 );
+  $this-colour-value: nth( $colour, 2 );
 
-  .c-btn--#{ $this-name } {
-    background-color: $this-colour;
+  .c-btn--#{ $this-colour-name } {
+    background-color: $this-colour-value;
 
     &,
     &:hover,
@@ -52,7 +54,7 @@
 
     &:hover,
     &:focus {
-      background-color: darken( $this-colour, $glbal-enhance-variant );
+      background-color: darken( $this-colour-value, $glbal-enhance-variant );
     }
 
   }
