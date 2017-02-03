@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #HEIGHTS
+   ========================================================================== */
+
+/**
+ * Like width, but tall-ways.
+ *
+ * [M]in-height to allow elements to grow with content.
+ */
+
+.u-height-tiny {
+  min-height: ( $inuit-global-line-height / 4 ) !important;
+}
+
+.u-height-small {
+  min-height: ( $inuit-global-line-height / 2 ) !important;
+}
+
+.u-height {
+  min-height: $inuit-global-line-height !important;
+}
+
+.u-height-large {
+  min-height: ( $inuit-global-line-height * 2 ) !important;
+}
+
+.u-height-huge {
+  min-height: ( $inuit-global-line-height * 4 ) !important;
+}

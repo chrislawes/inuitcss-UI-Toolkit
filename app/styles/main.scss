@@ -120,6 +120,7 @@
  * UTILITIES
  * Clearfix.............Bind our clearfix onto a utility class.
  * Widths...............Simple width helper classes.
+ * Heights..............Simple height helper classes.
  * Headings.............Reassigning our heading styles to helper classes.
  * Spacing..............(Framework) Nudge bits of the DOM around with these
  *                      spacing classes.
@@ -136,6 +137,7 @@
 
 @import "../../node_modules/inuitcss/utilities/utilities.clearfix";
 @import "../../node_modules/inuitcss/utilities/utilities.widths";
+@import "utilities/_utilities.heights";
 @import "../../node_modules/inuitcss/utilities/utilities.headings";
 @import "../../node_modules/inuitcss/utilities/utilities.spacing";
 @import "utilities/_utilities.spacing";
