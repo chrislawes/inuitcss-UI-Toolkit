@@ -38,7 +38,7 @@ $inuit-config: (
 // Layout settings.
 $inuit-wrapper-width: 1200px;
 
-// Base settings/
+// Base settings.
 $inuit-global-font-size:    16px;
 $inuit-global-line-height:  32px; /* [1] */
 
@@ -54,7 +54,7 @@ $inuit-offsets: true;
 
 // Number of fractions to create width utilities from.
 // 1/1 1/2 1/3 ...
-$inuit-fractions: 1 2 3 4 5 6 7 8 9 10 11 12;
+$inuit-fractions: 1 2 3 4 5 6;
 
 // Responsive settings.
 // NOTE: Whole framework is mobile first. "[M]obile" is that size and up.
@@ -72,5 +72,5 @@ $mq-breakpoints: (
 
 
 // File path helpers.
-$global-image-path:  '../images/';
-$global-font-path:   '../fonts/';
+$global-path-image: '../images/';
+$global-path-font:  '../fonts/';

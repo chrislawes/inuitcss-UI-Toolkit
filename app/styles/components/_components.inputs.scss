@@ -18,8 +18,9 @@
  * 1. All form elements should grow to fill the widths of their containers.
  * 2. Grow from baseline of the grid; helpes with vertical rhythm.
  * 3. Replace border (adds to vertical height), with inset box-shadow. Extending
- * border utility will effect source order.
+ *    border utility will effect source order.
  * 4. Textareas are double the height of text inputs, by default.
+ * 5. Fussy vertical rhythm.
  */
 
 .c-input-text,
@@ -29,13 +30,14 @@
   vertical-align: bottom; /* [2] */
   border: none; /* [3] */
   @extend .u-bordered; /* [3] */
-  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit-small;
+  padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+  border-radius: $global-size-radius;
 }
 
 .c-input-text {
-  height: ( $inuit-global-line-height + $inuit-global-spacing-unit-small );
-  margin-top: $inuit-global-spacing-unit-tiny;
-  margin-bottom: $inuit-global-spacing-unit-tiny;
+  height: ( $inuit-global-line-height + $inuit-global-spacing-unit-tiny );
+  margin-top: ( $inuit-global-spacing-unit-tiny / 2 ); /* [5] */
+  margin-bottom: ( $inuit-global-spacing-unit-tiny / 2 ); /* [5] */
 }
 
 .c-input-textarea {

@@ -20,9 +20,9 @@
   border: none; /* [6] */
   font: inherit; /* [3] */
   text-align: center; /* [4] */
-  border-radius: $global-radius;
+  border-radius: $global-size-radius;
   cursor: pointer; /* [5] */
-  transition: $global-transition;
+  transition: $global-speed-transition;
 }
 
 
