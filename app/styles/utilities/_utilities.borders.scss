@@ -12,24 +12,12 @@
 }
 
 
- /**
-  * Border radius helper; unify all border radius variations.
-  */
-
-.u-br { border-radius: $global-size-radius; }
-
-
-
-/* Style variants
-   ========================================================================== */
-
 /**
 * Loops each of our site colours, and creates modifier classes for our
 * ".u-bordered" helper - using the array keys from $global-colours.
 *
 * Example:
 * <div class="u-bordered-primary">Primary colour border</div>
-*
 */
 
 @each $colour in $global-colours {
@@ -41,16 +29,22 @@
 }
 
 
+/**
+ * Border radius helper; unify all border radius variations.
+ */
+
+.u-br { border-radius: $global-size-radius !important; }
+
+
+
 /* Position variants
   ========================================================================== */
 
 /**
-*
-* Example:
-* <div class="u-bordered-bottom">Bottom border</div>
-* <div class="u-bordered-left">Bottom left</div>
-*
-*/
+ * Example:
+ * <div class="u-bordered-bottom">Bottom border</div>
+ * <div class="u-bordered-left">Bottom left</div>
+ */
 
 .u-bordered-top {
   box-shadow: inset 0 $global-size-outline 0 0 $global-colour-outline;

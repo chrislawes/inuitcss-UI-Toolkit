@@ -82,7 +82,56 @@
 
 
 
-/* Word Adjustments
+/* Text Links
+   ========================================================================== */
+
+/**
+ * 1. Remove underline by default.
+ * 2. To make non-a-tag links, to look like a-tag-links.
+ */
+
+.u-link {
+  text-decoration: none; /* [1] */
+  color: $global-colour-copy-links;
+  cursor: pointer; /* [2] */
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active,
+  &:focus,
+  &:visited {
+    color: $global-colour-copy-links;
+  }
+}
+
+@each $colour in $global-colours {
+
+  .u-link--#{ nth( $colour, 1 ) } {
+    color: #{ nth( $colour, 2 ) };
+
+    &:active,
+    &:focus,
+    &:visited {
+      color: #{ nth( $colour, 2 ) };
+    }
+  }
+
+}
+
+
+.u-link--underline {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+
+/* Text Block Adjustments
    ========================================================================== */
 
 /**
