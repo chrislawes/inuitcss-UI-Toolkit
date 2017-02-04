@@ -65,3 +65,21 @@
   }
 
 }
+
+
+
+/* Text Visibility
+   ========================================================================== */
+
+/**
+ * Method from:
+ * http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+ *
+ * 1. Replaced 100%, with 200%, because some font rendering has slight indent.
+ */
+
+.u-hide-text {
+  text-indent: 200%; /* [1] */
+  white-space: nowrap;
+  overflow: hidden;
+}
